@@ -10,7 +10,6 @@ export const Hero = () => {
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2070" 
           alt="Modern Architecture" 
           className="w-full h-full object-cover opacity-20"
-          referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/60 to-transparent" />
       </div>
