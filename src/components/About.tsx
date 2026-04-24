@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
+import mapa from '../assets/images/mapa.png';
 
 export const About = () => {
     return (
@@ -25,10 +26,9 @@ export const About = () => {
                     <div className="relative">
                 <div className="aspect-[4/3] bg-gray-100 shadow-sm overflow-hidden">
                     <img 
-                        src="/mapa.png" 
+                        src={mapa} 
                         alt="Mapa de localização" 
                         className="w-full h-full object-contain"
-                        referrerPolicy="no-referrer"
                     />
                 </div>
               </div>

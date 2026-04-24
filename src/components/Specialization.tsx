@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
+import assinatura from '../assets/images/assinatura.png';
 
 export const Specialization = () => {
     return (
@@ -27,10 +28,9 @@ export const Specialization = () => {
                 <div className="order-2 lg:order-2">
                     <div className="aspect-[4/3] bg-gray-100 overflow-hidden shadow-sm">
                         <img 
-                            src="/assinatura.png"
+                            src={assinatura}
                             alt="Profissional assinando contrato" 
                             className="w-full h-full object-cover"
-                            referrerPolicy="no-referrer"
                         />
                     </div>
                 </div>
