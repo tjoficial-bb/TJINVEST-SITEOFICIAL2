@@ -25,7 +25,7 @@ export const About = () => {
                     <div className="relative">
                 <div className="aspect-[4/3] bg-gray-100 shadow-sm overflow-hidden">
                     <img 
-                        src="/images/mapa_brasil_pin_1776959798921.png" 
+                        src="/mapa_brasil_pin_1776959798921.png" 
                         alt="Mapa de localização" 
                         className="w-full h-full object-contain"
                         referrerPolicy="no-referrer"
