@@ -17,15 +17,15 @@ export const FAQAccordion: React.FC<FAQProps> = ({ items }) => {
   return (
     <div className="space-y-4">
       {items.map((item, index) => (
-        <div key={index} className="border-b border-white/10">
+        <div key={index} className="border-b border-brand-white/10 last:border-b-0">
           <button
-            className="w-full flex justify-between items-center py-6 text-left font-semibold text-white/90 hover:text-brand-gold transition-colors"
+            className="w-full flex justify-between items-center py-8 text-left font-normal text-brand-white/90 hover:text-brand-gold transition-colors group"
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
           >
-            {item.question}
+            <span className="text-base tracking-wide">{item.question}</span>
             <ChevronDown 
-              className={`transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`} 
-              size={20}
+              className={`transition-transform duration-500 text-brand-gold/50 group-hover:text-brand-gold ${openIndex === index ? 'rotate-180' : ''}`} 
+              size={18}
             />
           </button>
           <AnimatePresence>

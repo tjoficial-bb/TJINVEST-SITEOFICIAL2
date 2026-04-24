@@ -5,6 +5,8 @@ import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
 import { HowItWorksPage } from './pages/HowItWorksPage';
+import { SpecialtiesPage } from './pages/SpecialtiesPage';
+import { FAQPage } from './pages/FAQPage';
 import { ContactPage } from './pages/ContactPage';
 import { MessageCircle } from 'lucide-react';
 
@@ -13,11 +15,13 @@ export default function App() {
     <Router>
       <div className="bg-brand-black text-brand-white selection:bg-brand-gold selection:text-brand-black min-h-screen">
         <Navbar />
-        <main className="pt-20">
+        <main className="">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/quem-somos" element={<AboutPage />} />
             <Route path="/como-funciona" element={<HowItWorksPage />} />
+            <Route path="/especialidade" element={<SpecialtiesPage />} />
+            <Route path="/faq" element={<FAQPage />} />
             <Route path="/contato" element={<ContactPage />} />
           </Routes>
         </main>

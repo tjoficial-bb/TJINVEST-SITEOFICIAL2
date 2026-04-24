@@ -2,15 +2,22 @@
 
 @theme {
   --color-brand-black: #050505; /* Softer, richer black */
-  --color-brand-surface: #111111; /* Subtle surface depth */
+  --color-brand-surface: #0a0a0a; /* Subtle surface depth */
+  --color-brand-card: #111111;
   --color-brand-gold: #C5A059; /* More muted, classic gold */
+  --color-brand-gold-light: #D4B476;
   --color-brand-white: #EAEAEA; /* Slightly off-white for better readability */
   
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Cormorant Garamond", serif;
+
+  --text-fluid-h1: clamp(2.5rem, 8vw, 6.5rem);
+  --text-fluid-h2: clamp(2.25rem, 6vw, 4.5rem);
+  --text-fluid-h3: clamp(1.75rem, 4vw, 3rem);
+  --text-fluid-body: clamp(1rem, 1.2vw, 1.125rem);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap');
 
 body {
   background-color: var(--color-brand-black);
@@ -19,23 +26,48 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
-  font-weight: 300; /* Lighter weight for a more premium look */
+  font-weight: 300;
 }
 
 /* Typography refinements */
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 400;
-  letter-spacing: -0.02em;
+  font-weight: 300;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Utility refinements */
-.text-gold { color: var(--color-brand-gold); }
-.bg-gold { background-color: var(--color-brand-gold); }
-.border-gold { border-color: var(--color-brand-gold); }
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Fluid Typography Utilities */
+.text-fluid-h1 { font-size: var(--text-fluid-h1); }
+.text-fluid-h2 { font-size: var(--text-fluid-h2); }
+.text-fluid-h3 { font-size: var(--text-fluid-h3); }
+.text-fluid-body { font-size: var(--text-fluid-body); }
 
 /* Premium Scrollbar */
-::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--color-brand-black); }
 ::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 99px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--color-brand-gold); }
+
+/* Custom Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.bg-texture {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2v-4h4v-2h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2v-4h4v-2H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
