@@ -4,7 +4,7 @@ import assinatura from '../assets/images/assinatura.png';
 
 export const Specialization = () => {
     return (
-        <section id="servicos" className="py-32 bg-brand-black text-brand-white">
+        <section id="servicos" className="py-20 bg-brand-black text-brand-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 {/* Left Card */}

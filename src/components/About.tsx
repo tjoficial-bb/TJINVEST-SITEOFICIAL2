@@ -3,7 +3,7 @@ import mapa from '../assets/images/mapa.png';
 
 export const About = () => {
     return (
-        <section id="sobre" className="py-32 bg-brand-black text-brand-white">
+        <section id="sobre" className="py-20 bg-brand-black text-brand-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               <div className="relative order-2 lg:order-1">

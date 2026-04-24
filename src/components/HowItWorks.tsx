@@ -1,10 +1,10 @@
 import React from 'react';
 
 export const HowItWorks = () => (
-  <section id="como-funciona" className="py-32 bg-brand-black text-brand-white">
+  <section id="como-funciona" className="py-20 bg-brand-black text-brand-white">
     <div className="max-w-7xl mx-auto px-6">
       <span className="text-brand-gold uppercase tracking-[0.2em] text-[10px] mb-6 block text-center font-medium">Como Funciona</span>
-      <h2 className="text-fluid-h2 font-display mb-24 text-center">
+      <h2 className="text-fluid-h2 font-display mb-16 text-center">
         Do edital à <span className="text-brand-gold italic">entrega das chaves</span>
       </h2>
       
