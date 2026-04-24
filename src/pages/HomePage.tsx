@@ -1,5 +1,6 @@
 import React from 'react';
 import { Hero } from '../components/Hero';
+import { CredibilitySection } from '../components/CredibilitySection';
 import { Testimonials } from '../components/Testimonials';
 import { FAQSection } from '../components/FAQSection';
 import { FinalCTA } from '../components/FinalCTA';
@@ -12,6 +13,7 @@ import { Contact } from '../components/Contact';
 export const HomePage = () => (
   <main>
     <Hero />
+    <CredibilitySection />
     <About />
     <HowItWorks />
     <Specialization />
